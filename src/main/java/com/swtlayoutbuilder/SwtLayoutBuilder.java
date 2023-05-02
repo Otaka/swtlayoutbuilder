@@ -1,6 +1,7 @@
 package com.swtlayoutbuilder;
 
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 
 public class SwtLayoutBuilder {
     private final Composite container;
@@ -18,7 +19,7 @@ public class SwtLayoutBuilder {
         return new BorderLayoutBuilder(container);
     }
 
-    public RuleLayoutBuilder ruleLayout() {
+    public RuleLayoutBuilder<Control> ruleLayout() {
         return new RuleLayoutBuilder(container);
     }
 

@@ -1,33 +1,26 @@
 package com.swtlayoutbuilder.rulelayout;
 
-import org.eclipse.swt.widgets.Control;
-
-public class ComponentWrapper {
-    private Control control;
-    private RuleLayoutGroup group;
-    private final ComponentRect rect = new ComponentRect();
-
-    public ComponentWrapper(Control control) {
-        this.control = control;
-    }
-
-    public ComponentWrapper(RuleLayoutGroup group) {
-        this.group = group;
-    }
+public class ComponentWrapper<T> {
+    private T component;
+    private LayoutGroup<T> group;
 
     public boolean isGroup() {
         return group != null;
     }
 
-    public ComponentRect getRect() {
-        return rect;
+    public ComponentWrapper(T component) {
+        this.component = component;
     }
 
-    public Control getControl() {
-        return control;
+    public ComponentWrapper(LayoutGroup<T> group) {
+        this.group = group;
     }
 
-    public RuleLayoutGroup getGroup() {
+    public LayoutGroup<T> getGroup() {
         return group;
+    }
+
+    public T getComponent() {
+        return component;
     }
 }
