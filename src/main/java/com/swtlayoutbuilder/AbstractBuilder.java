@@ -5,7 +5,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
 public abstract class AbstractBuilder<T> {
-    protected final Composite container;
+    protected Composite container;
     private boolean debug;
 
     protected AbstractBuilder(Composite container) {

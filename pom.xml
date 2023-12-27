@@ -6,7 +6,7 @@
 
     <groupId>io.github.otaka</groupId>
     <artifactId>swtlayoutbuilder</artifactId>
-    <version>0.7</version>
+    <version>0.8</version>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -20,6 +20,14 @@
             <version>4958r2</version>
             <scope>provided</scope>
             <optional>true</optional>
+        </dependency>
+
+<!-- https://mvnrepository.com/artifact/com.miglayout/miglayout-swt -->
+        <dependency>
+            <groupId>com.miglayout</groupId>
+            <artifactId>miglayout-swt</artifactId>
+            <version>11.3</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>
@@ -101,7 +109,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
+                <version>1.6.13</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>

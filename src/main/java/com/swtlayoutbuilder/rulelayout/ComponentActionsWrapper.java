@@ -5,10 +5,13 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Shell;
 
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Rectangle;
 import java.util.function.Function;
 
 class ComponentActionsWrapper {
+    private boolean firstTimeGetShellRect = true;
+
     private Object map(Object component, Function<LayoutGroup<Control>, Object> groupMapping, Function<Control, Object> componentMapper) {
         if (component instanceof ComponentWrapper) {
             ComponentWrapper<Control> wrapper = (ComponentWrapper<Control>) component;
@@ -29,8 +32,6 @@ class ComponentActionsWrapper {
     private Rectangle componentRect2awtRect(ComponentRect r) {
         return new Rectangle(r.getX(), r.getY(), r.getWidth(), r.getHeight());
     }
-
-    private boolean firstTimeGetShellRect = true;
 
     public Rectangle getComponentRect(Object component) {
         if (component instanceof Shell) {

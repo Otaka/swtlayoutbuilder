@@ -13,8 +13,8 @@ import java.util.List;
 public class RowWithWrappingBuilder extends AbstractBuilder<RowWithWrappingBuilder> {
 
     private final RowLayout layout;
-    private Control currentComponent;
     private final List<Control> children = new ArrayList<>();
+    private Control currentComponent;
     private ComponentOrientation componentPlacementDirection;
 
     public RowWithWrappingBuilder(Composite container) {

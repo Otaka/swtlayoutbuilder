@@ -1,6 +1,10 @@
 package com.swtlayoutbuilder.borderlayout;
 
-import static com.swtlayoutbuilder.borderlayout.BorderLayout.*;
+import static com.swtlayoutbuilder.borderlayout.BorderLayout.CENTER;
+import static com.swtlayoutbuilder.borderlayout.BorderLayout.EAST;
+import static com.swtlayoutbuilder.borderlayout.BorderLayout.NORTH;
+import static com.swtlayoutbuilder.borderlayout.BorderLayout.SOUTH;
+import static com.swtlayoutbuilder.borderlayout.BorderLayout.WEST;
 
 public class BorderData {
     public final int position;

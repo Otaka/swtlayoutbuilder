@@ -14,9 +14,9 @@ public class BorderLayout extends Layout {
     public static final int EAST = 3;
     public static final int WEST = 4;
     private final Control[] controls = new Control[5];
+    private final Point[] sizes = new Point[5];
     private int vgap;
     private int hgap;
-    private final Point[] sizes = new Point[5];
 
 
     public BorderLayout() {
